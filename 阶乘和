@@ -1,0 +1,15 @@
+int main()
+{
+	int n = 0;
+	int ret = 1;
+	int sum = 0;
+	printf("Please input:");
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++)
+	{
+		ret *= i;
+		sum += ret;
+	}
+	printf("%d", sum);
+	return 0;
+}
