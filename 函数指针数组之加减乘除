@@ -1,0 +1,50 @@
+int Add(int x, int y)
+{
+	return x + y;
+}
+int Sub(int x, int y)
+{
+	return x - y;
+}
+int Mul(int x, int y)
+{
+	return x * y;
+}
+int Div(int x, int y)
+{
+	return x / y;
+}
+void menu()
+{
+	printf("***  0.exit ****\n");
+	printf("***  1.Add  ****\n");
+	printf("***  2.Sub  ****\n");
+	printf("***  3.Mul  ****\n");
+	printf("***  4.Div  ****\n");
+}
+int main()
+{
+	int i = 0;
+	do {
+		menu();
+		printf("请输入你的选择：>\n");
+		scanf("%d", &i);
+		int(*pfArr[5])(int, int) = { 0,Add,Sub,Mul,Div };
+		if (i >= 1 && i <= 4)
+		{
+			int x, y;
+			printf("请输入两位操作数；>\n");
+			scanf("%d %d", &x, &y);
+			printf("%d\n", pfArr[i](x, y));
+		}
+		else if (i == 0)
+		{
+			printf("已退出程序\n");
+		}
+		else
+		{
+			printf("输入错误，请重新新输入:>\n");
+		}
+	} while (i);
+	return 0;
+}
