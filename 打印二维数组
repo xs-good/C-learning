@@ -1,0 +1,26 @@
+void Print1(int arr[][3], int x, int y)
+{
+	int i = 0;
+	for (i = 0; i < x; i++)
+	{
+		int j = 0;
+		for (j = 0; j < y; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+}
+void Print2(int (*p)[3], int x, int y)
+{
+	int i = 0;
+	for (i = 0; i < x; i++)
+	{
+		int j = 0;
+		for (j = 0; j < y; j++)
+		{
+			printf("%d ",(*(p+i))[j]);
+		}
+		printf("\n");
+	}
+}
