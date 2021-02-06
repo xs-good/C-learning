@@ -1,0 +1,19 @@
+int judge_daffodil_number(int num)
+{
+	//1.求位数
+	int n = 1, sum = 0;
+	int tmp1 = num;
+	int tmp2 = num;
+	while (tmp1 /= 10)
+	{
+		n++;
+	}
+	//2.求和
+	while (tmp2)
+	{
+		sum +=(int)pow(tmp2 % 10, n);
+		tmp2 /= 10;
+	}
+	//3.比较
+	return sum == num;
+}
